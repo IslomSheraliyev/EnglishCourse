@@ -91,6 +91,10 @@ class Bot:
         def start(message):
             self.start(message)
 
+        @self.bot.message_handler(content_types=['text', 'video', 'photo'])
+        def get_id(message):
+            print(message.id)
+
         @self.bot.callback_query_handler(func=lambda call: True)
         def callback(call):
 
