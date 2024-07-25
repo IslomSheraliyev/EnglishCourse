@@ -74,6 +74,17 @@ class Bot:
             except Exception as e:
                 print(e)
 
+    def send_fourth_message(self, chat_id):
+        if chat_id:
+            try:
+                self.bot.send_message(
+                    chat_id=chat_id,
+                    text=self.strings.delayed_fourth,
+                    parse_mode=self.strings.html
+                )
+            except Exception as e:
+                print(e)
+
     def schedule_one_hour_message(self, chat_id):
         run_date = datetime.now(pytz.timezone('Asia/Tashkent')) + timedelta(hours=1)
         self.scheduler.add_job(self.send_first_message, 'date', run_date=run_date, args=[chat_id])
@@ -85,6 +96,10 @@ class Bot:
     def schedule_twelve_hour_message(self, chat_id):
         run_date = datetime.now(pytz.timezone('Asia/Tashkent')) + timedelta(hours=12)
         self.scheduler.add_job(self.send_third_message, 'date', run_date=run_date, args=[chat_id])
+
+    def schedule_twenty_four_hour_message(self, chat_id):
+        run_date = datetime.now(pytz.timezone('Asia/Tashkent')) + timedelta(hours=24)
+        self.scheduler.add_job(self.send_fourth_message, 'date', run_date=run_date, args=[chat_id])
 
     def run(self):
         @self.bot.message_handler(commands=['start'])
@@ -111,6 +126,7 @@ class Bot:
                 self.schedule_one_hour_message(call.message.chat.id)
                 self.schedule_three_hour_message(call.message.chat.id)
                 self.schedule_twelve_hour_message(call.message.chat.id)
+                self.schedule_twenty_four_hour_message(call.message.chat.id)
                 self.scheduler.start()
 
         self.bot.infinity_polling(

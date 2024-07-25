@@ -39,3 +39,9 @@ class Strings(object):
                     "<i>Nechtalab essay yozdim.</i>\n\n" \
                     "🥲 Baribir bo’miyapti.\n\n" \
                     "Bilish uchun to’liq <b>VIDEODARS</b>ni ko’ring 🫡"
+
+    delayed_fourth = "🤔 <b><i>Sizdayam shunaqami?</i></b>\n\n" \
+                     "<i> Essay savolini o’qidiz. Ideyalariz juda ko’p. Mazza qilib yozdiz. Imtihondan o’zizga ishonch bilan chiqdiz. Yorvordim bu safar diyapsiz o’zizga o’ziz.</i>\n\n" \
+                     "🤦🏻‍♂️ Ammo lekin biroq, natija yana pas\n\n" \
+                     "<b>Chunki siz noto’g’ri joyga e’tibor qaratgansiz.</b>\n\n" \
+                     "Aslida nimalarga e’tibor qaratish zarurligini bilish uchun to’liq <b>VIDEODARS</b>ni ko’ring 🫡"
