@@ -1,5 +1,5 @@
 class Strings(object):
-    token = "7257036842:AAF5VF-Rceah_MCUVWiYrHRuVK17d3gVS-g"
+    token = "7314759745:AAFvTZ2VyQBiTIIF_TXt5oKnubDOU5va6HE"
 
     db_name = "users.db"
 
